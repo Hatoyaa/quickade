@@ -1,0 +1,63 @@
+﻿@model LibraryMVC.Models.ApplicationUsers
+@{
+   <form method="post" asp-action="Register">
+    <div class="form-signin register" >
+      <h1 class="h1 mb-4 fw-normal text-center">Sign up</h1>
+      <div class="row g-2">
+        <div class="col">
+          <div class="form-floating">
+            <input
+              asp-for="FirstName"
+              aria-label="First name"
+              type="text"
+              class="form-control mb-1"
+              placeholder="First name"
+              id="fname"
+            />
+            <label asp-for="FirstName" for="fname">First name</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-floating">
+            <input
+              type="text"
+              aria-label="Last name"
+              class="form-control mb-1"
+              placeholder="Last name"
+              id="lname"
+              asp-for="LastName"
+            />
+            <label asp-for="LastName" for="lname">Last name</label>
+          </div>
+        </div>
+      </div>
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control mb-1"
+              placeholder="name@example.com"
+              id="floatingInput"
+              asp-for="Email"
+            />
+            <label asp-for="Email" for="floatingInput">Email address</label>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control mb-1"
+              placeholder="Password"
+              id="floatingPassword"
+              asp-for="Password"
+            />
+            <label asp-for="Password" for="floatingPassword">Password</label>
+          </div>
+        </div>
+      </div>
+      <button asp-controller="Account" asp-action="Register" class="w-100 btn btn-lg btnbody" type="submit">Register</button>
+    </div>
+    </form>
+}

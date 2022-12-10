@@ -1,0 +1,30 @@
+﻿@model LibraryMVC.Models.LoginViewModel
+@{
+    <form method='post' asp-action="Login">
+        <h1 class="h1 mb-3 fw-normal">Wecome back</h1>
+        <h2 class="h4 mb-3 fw-normal"><aside>Please sign in</aside></h2>
+
+        <div class="form-floating mb-3">
+           <input
+              type="email"
+              class="form-control mb-1"
+              placeholder="name@example.com"
+              id="floatingInput"
+              asp-for="Email"
+            />
+            <label asp-for="Email" for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Password"
+            asp-for="Password"
+          />
+          <label for="floatingPassword">Password</label>
+        </div>
+
+        <button asp-controller="Account" asp-action="Login" class="w-100 btn btn-lg btnbody" type="submit">Sign in</button>
+      </form>
+}

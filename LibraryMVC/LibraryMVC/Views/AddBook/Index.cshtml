@@ -1,0 +1,32 @@
+﻿@model LibraryMVC.Models.Books
+@{
+    <div class="container">
+    <form method='post' asp-action="Index">
+       
+        <h1 class="h1 mb-3 fw-normal">Add book</h1>
+
+        <div class="form-floating mb-3">
+           <input
+              type="text"
+              class="form-control mb-1"
+              id="title"
+              placeholder="Title"
+              asp-for="Title"
+            />
+            <label asp-for="Title" for="title">Title</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="category"
+            placeholder="Category"
+            asp-for="Category"
+          />
+          <label asp-for="Category" for="category">Category</label>
+        </div>
+
+        <button asp-controller="AddBook" asp-action="Index" class="w-100 btn btn-lg btnbody mt-3" type="submit">Add</button>
+      </form>
+      </div>
+}

@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container marketing mt-5">
+        <!-- START THE FEATURETTES -->
+
+        <div class="row featurette">
+          <div class="col-md-7 text-center">
+            <h2 class="featurette-heading">Create a reading list.</h2>
+            <p class="lead">
+              A place to keep track of the books you're reading, the books
+              you've read, and the books that you want to read!
+            </p>
+            <form>
+                @if (!User.Identity.IsAuthenticated)
+                {
+                     <button asp-controller="Account" asp-action="Register" class="btn signup btnbody mt-3" type="submit">
+                      Join us
+                    </button>
+                }
+           </form>
+          </div>
+          <div class="col-md-5">
+            <img
+              width="500"
+              height="500"
+              src="https://www.maxpixel.net/static/photo/640/Education-Old-Books-Old-Archive-Book-Library-436498.jpg"
+              alt="library image"
+            />
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <!-- /END THE FEATURETTES -->
+      </div>
